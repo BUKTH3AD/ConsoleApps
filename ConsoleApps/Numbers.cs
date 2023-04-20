@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1
+namespace ConsoleApps
 {
     internal class Numbers
     {
@@ -15,8 +15,23 @@ namespace ConsoleApp1
             Console.WriteLine("Введите 5 уникальных числа");
             for (int i = 0; i < 5; i++)
             {
-                if 
+
+                int input = default;
+                input = int.Parse(Console.ReadLine());
+
+                while (numbers.Contains(input))
+                {
+                    Console.WriteLine("Такое число уже было");
+                    input = int.Parse(Console.ReadLine());
+                }
+                numbers[i] = input;
+
+                
             }
+            Array.Sort(numbers);
+            foreach (int number in numbers)
+            { Console.Write($"{number} "); }
+            
         }
     }
 }

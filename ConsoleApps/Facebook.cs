@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp1
+namespace ConsoleApps
 {
     internal class Facebook
     {
         internal static void Likes()
         {
-            string input = default;
+            string? input = default;
             List<string> likes = new List<string>();
             while (true)
             {

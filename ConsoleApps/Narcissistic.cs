@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ConsoleApp1
+﻿namespace ConsoleApps
 {
-    using NUnit.Framework;
     using System;
     using System.Collections.Generic;
     public class Kata
@@ -36,24 +29,24 @@ namespace ConsoleApp1
         }
     }
 
-    [TestFixture]
-    public class Sample_Test
-    {
-        private static IEnumerable<TestCaseData> testCases
-        {
-            get
-            {
-                yield return new TestCaseData(1)
-                                .Returns(true)
-                                .SetDescription("1 is narcissitic");
-                yield return new TestCaseData(371)
-                                .Returns(true)
-                                .SetDescription("371 is narcissitic");
-
-            }
-        }
-
-        [Test, TestCaseSource("testCases")]
-        public bool Test(int n) => Kata.Narcissistic(n);
-    }
+    //[TestFixture]
+    //public class Sample_Test
+    //{
+    //    private static IEnumerable<TestCaseData> testCases
+    //    {
+    //        get
+    //        {
+    //            yield return new TestCaseData(1)
+    //                            .Returns(true)
+    //                            .SetDescription("1 is narcissitic");
+    //            yield return new TestCaseData(371)
+    //                            .Returns(true)
+    //                            .SetDescription("371 is narcissitic");
+    //
+    //        }
+    //    }
+    //
+    //    [Test, TestCaseSource("testCases")]
+    //    public bool Test(int n) => Kata.Narcissistic(n);
+    //}
 }
