@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -32,6 +33,17 @@ namespace ConsoleApps
             foreach (int number in numbers)
             { Console.Write($"{number} "); }
             
+        }
+        internal static void AllNumbers() 
+        {
+            Console.WriteLine("Please enter numbers or type \"Quit\" for exit");
+            List<int> nums = new List<int>();
+            string input = Console.ReadLine();
+            while (input.ToLower() != "quit")
+            {
+
+            }
+            nums.Add(int.Parse(Console.ReadLine()));
         }
     }
 }
